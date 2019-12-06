@@ -15,15 +15,18 @@ class Person
   end
 
   def likes_candy?
-    true
+    candy_lover
   end
 
-  def ballin_candy_lover?
-    if @candy_lover == true
+  def ballin_candy_lover?(likes_candy)
+    likes_candy = candy_lover
+    if likes_candy
       "Aw sweet, this cat loves them some candy!"
     else
       10.times do
         "not a ballin candy lover"
+      end
     end
   end
 end
+ballin_candy_lover(likes_candy)
